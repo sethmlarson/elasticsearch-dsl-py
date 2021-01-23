@@ -168,7 +168,6 @@ try:
     from .index import AsyncIndex, AsyncIndexTemplate  # noqa: F401
     from .search import AsyncMultiSearch, AsyncSearch  # noqa: F401
     from .update_by_query import AsyncUpdateByQuery  # noqa: F401
-    from .mapping import AsyncMapping  # noqa: F401
 
     __all__.extend(
         [
@@ -179,7 +178,6 @@ try:
             "AsyncSearch",
             "AsyncMultiSearch",
             "AsyncUpdateByQuery",
-            "AsyncMapping",
         ]
     )
 except ImportError:
