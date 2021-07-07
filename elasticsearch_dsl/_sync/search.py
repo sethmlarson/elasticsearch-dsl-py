@@ -427,7 +427,8 @@ class Search(Request):
 
         d = self.to_dict(count=True)
         # TODO: failed shards detection
-        return es.count(index=self._index, body=d, **self._params)["count"]
+        resp_count = es.count(index=self._index, body=d, **self._params)
+        return resp_count["count"]
 
     def execute(self, ignore_cache=False):
         """
